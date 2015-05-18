@@ -1,0 +1,9 @@
+demo\model\Customer.class
+demo\DemoApplication.class
+demo\model\DiscountCode_.class
+demo\model\MicroMarket.class
+demo\model\Customer_.class
+demo\controllers\TestController.class
+demo\model\repositiories\CustomerRepository.class
+demo\model\DiscountCode.class
+demo\model\MicroMarket_.class
