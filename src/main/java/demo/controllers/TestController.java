@@ -36,7 +36,7 @@ public class TestController {
 
     @RequestMapping(value = "/customers/names/{name}")
     List<Customer> getCustomersByName(@PathVariable String name) {
-        return repository.findByNameLike(name);
+        return repository.findByName(name);
     }
 
     @RequestMapping(value = "/customers/all")
@@ -47,7 +47,16 @@ public class TestController {
         } else {
             return new ArrayList<>();
         }
-
+    }
+    
+    @RequestMapping(value = "/customers/add/{name}/{surname}")
+    void addCustomer(@PathVariable("name")String name, @PathVariable("surname") String surname){
+        Customer n = new Customer();
+        n.setName(name);
+        n.setAddressline1("address");
+        n.setEmail("dackow@gmail.com");
+        n.setCity("ddd");
+        repository.save(n);
     }
 
     @RequestMapping(value = "/customers/states/{state}")

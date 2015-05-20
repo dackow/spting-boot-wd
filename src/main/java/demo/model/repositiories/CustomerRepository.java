@@ -14,7 +14,7 @@ import org.springframework.data.repository.CrudRepository;
  * @author Waldemar Dacko <waldekd@softsystem.pl>
  */
 public interface CustomerRepository extends CrudRepository<Customer, Long>{
-    List<Customer> findByNameLike(String name);    
+    List<Customer> findByName(String name);    
     List<Customer> findByState(String state);
   
 }
